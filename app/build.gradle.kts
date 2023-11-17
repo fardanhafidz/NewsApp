@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-parcelize")
+    //Moshi Kotlin Codegan
     id("com.google.devtools.ksp").version("1.6.10-1.0.4")
 }
 
@@ -33,6 +35,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    buildFeatures {
+        viewBinding = true
     }
 }
 
