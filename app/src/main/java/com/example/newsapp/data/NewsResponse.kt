@@ -9,20 +9,20 @@ import kotlinx.parcelize.Parcelize
 
 @JsonClass(generateAdapter = true)
 data class NewsResponse(
-    @Json(name = "totalResults")
+    @field:Json(name = "totalResults")
     val totalResults: Int? = null,
 
-    @Json(name = "articles")
+    @field:Json(name = "articles")
     val articles: List<ArticlesItem>? = null,
 
-    @Json(name = "status")
+    @field:Json(name = "status")
     val status: String? = null
 )
 
 @JsonClass(generateAdapter = true)
 @Parcelize
 data class Source(
-    @Json(name = "name")
+    @field:Json(name = "name")
     val name: String? = null
 ) : Parcelable
 
@@ -31,27 +31,27 @@ data class Source(
 @JsonClass(generateAdapter = true)
 @Parcelize
 data class ArticlesItem(
-    @Json(name = "publishedAT")
+    @field:Json(name = "publishedAT")
     val publishedAt: String? = null,
 
-    @Json(name = "author")
+    @field:Json(name = "author")
     val author: String? = null,
 
-    @Json(name = "urlToImage")
+    @field:Json(name = "urlToImage")
     val urlToImage: String? = null,
 
-    @Json(name = "description")
+    @field:Json(name = "description")
     val description: String? = null,
 
-    @Json(name = "source")
+    @field:Json(name = "source")
     val source: Source? = null,
 
-    @Json(name = "title")
+    @field:Json(name = "title")
     val title: String? = null,
 
-    @Json(name = "url")
+    @field:Json(name = "url")
     val url: String? = null,
 
-    @Json(name = "content")
+    @field:Json(name = "content")
     val content: String? = null
 ) : Parcelable

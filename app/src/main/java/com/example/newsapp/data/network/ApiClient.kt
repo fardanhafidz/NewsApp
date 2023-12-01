@@ -25,9 +25,5 @@ object ApiClient {
             .addConverterFactory(MoshiConverterFactory.create())
             .build()
             .create(ApiService::class.java)
-
-
     }
-
-
 }

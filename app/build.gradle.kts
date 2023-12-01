@@ -3,7 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("kotlin-parcelize")
     //Moshi Kotlin Codegan
-    id("com.google.devtools.ksp").version("1.6.10-1.0.4")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -30,11 +30,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         viewBinding = true
@@ -54,11 +54,11 @@ dependencies {
     //SplashScreen Aplikasi tampilan awal sebelum aplikasi dibuka
     implementation("androidx.core:core-splashscreen:1.1.0-alpha02")
 
-    //Moshi parsing Kotlin Codegan
-    ksp("com.squareup.moshi:moshi-kotlin-codegen:1.14.0")
-
     //Depend via Maven
     implementation("com.squareup.moshi:moshi:1.14.0")
+
+    //Moshi parsing Kotlin Codegan
+    ksp("com.squareup.moshi:moshi-kotlin-codegen:1.14.0")
 
     //Impementation penggunaan donwload gambar menggunkan fungsi picasso
     implementation ("com.squareup.picasso:picasso:2.8")

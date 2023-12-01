@@ -13,7 +13,7 @@ interface ApiService {
         @Query("language") language: String = "en",
         @Query("pageSize") pageSize: Int = 50,
         @Query("sortBy") sortBy : String = "popularity"
-    ):Call<NewsResponse>
+    ): Call<NewsResponse>
 
     @GET("/v2/everything")
     fun getAlQuranNews(
