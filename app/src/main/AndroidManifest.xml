@@ -19,6 +19,7 @@
             android:exported="false" />
         <activity
             android:name=".DetailActivity"
+            android:theme="@style/Theme.NewsApp.NoActionBar"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
