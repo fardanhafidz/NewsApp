@@ -83,7 +83,9 @@ class DetailActivity : AppCompatActivity() {
                 }
             }
         }
-        data?.url?.let { binding.wvDetail.loadUrl(it) }
+        data?.url?.let { binding.wvDetail.loadUrl(
+            it.replaceFirst("http://","https://")
+        ) }
     }
 
     override fun onSupportNavigateUp(): Boolean {
